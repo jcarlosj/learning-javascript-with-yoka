@@ -1,25 +1,38 @@
-/** Scope */
+/** Excepciones const */
+// INCORRECTO
+// const name;
+// name = 'Yoka';
+/** NOTA: Las propiedades de los objetos asignados a constantes no son protegidos, es por esto que la siguiente sentencia se ejecuta sin problemas. */
 
-/** VAR */
-var name = 'Yoka';  // Declaración de tipo o ambito global
-
-{   // Ambito 2 o Alcance 2
-    var name = 'Juan';
+const Persona = {
+    nombre: 'Yoka',     // Se puede modificar
+    edad: 28            // Se puede modificar
 }
+console .log( Persona );
 
-console .log( name );
 
-/** LET */
-let name2 = 'Yoka';  // Declaración de tipo o ambito global
+Persona .nombre = 'Juan';
+console .log( Persona );
 
-{   // Ambito 2 o Alcance 2
-    let name2 = 'Juan';
-}
 
-console .log( name2 );
+/** Variables Primitivas 
+ *  - Number
+ *    - Enteras +/-
+ *    - Decimales +/- (float, double)
+ *  - String       Juan Carlos (String, pero tambien es un Array de Caracteres)
+      - String
+      - Char
+    - Boleano
+      - true (1)
+      - false (0)
 
-/** Cosas que causan error 
- *  - Llamar variables, funciones o constantes con el mismo nombre.
- *  - Lo anterior no aplica de acuerdo al Ambito
- * 
+/** Variables Complejas 
+ *  - Objetos
+ *      Coleccion de dato de tipo clave valor
+ *      var Persona = {
+ *          nombre: 'Yoka',
+ *          edad: 28
+ *      }
 */
+
+
