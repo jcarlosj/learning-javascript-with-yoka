@@ -1,27 +1,25 @@
 /** Scope */
-/** Funciona pero preferiblemente evitarla */
-petName = 'Nutella';
-petName = 'Rex';
-console.log( petName );
 
-// CORRECTO
-var petName = 'Nutella';
-var petName = 'Rex';
-console.log( petName );
+/** VAR */
+var name = 'Yoka';  // Declaración de tipo o ambito global
 
-/** CORRECTA */
-let name = 'Juan';
-name = 'Yoka';      // El valor no se puede declarar dos o mas veces
-console.log( name );
+{   // Ambito 2 o Alcance 2
+    var name = 'Juan';
+}
 
-/** INCORRECTA */
-let name = 'Juan';
-let name = 'Yoka';      // El valor no se puede declarar dos o mas veces
-console.log( name );
+console .log( name );
 
-/** Constantes: Valores que no cambian */
-const PI = 3.1415;      // CORRECTA
+/** LET */
+let name2 = 'Yoka';  // Declaración de tipo o ambito global
 
-// INCORRECTO
-const PI;      
-PI = 3.1415;
+{   // Ambito 2 o Alcance 2
+    let name2 = 'Juan';
+}
+
+console .log( name2 );
+
+/** Cosas que causan error 
+ *  - Llamar variables, funciones o constantes con el mismo nombre.
+ *  - Lo anterior no aplica de acuerdo al Ambito
+ * 
+*/
